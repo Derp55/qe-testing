@@ -18,7 +18,6 @@ function LaporanThread({isExpand}) {
     } else {
         threadDetail = "Jumlah Thread"
     }
- console.log(isExpand);
     return (
         <div
             id="container_middle"
