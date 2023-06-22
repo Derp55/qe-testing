@@ -8,7 +8,7 @@ function ThreadList(
   }) {
   return (
     <div className={isExpand ? 'gap-[15px] ml-[300px]': 'gap-[15px] ml-[150px]'}>
-      <ThreadProfile/>
+      <ThreadProfile isExpand={isExpand}/>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from "react"
 import { useLocation } from "react-router-dom"
 
-function LaporanThread() {
+function LaporanThread({isExpand}) {
 
     const location = useLocation()
 
@@ -18,11 +18,11 @@ function LaporanThread() {
     } else {
         threadDetail = "Jumlah Thread"
     }
-
+ console.log(isExpand);
     return (
         <div
             id="container_middle"
-            className="rounded-md mt-3 flex justify-center items-center h-24 w-[1210px]  bg-white">
+            className={isExpand ? 'rounded-md mt-3 flex justify-center w-[1180px] items-center h-24  bg-white': 'rounded-md mt-3 flex justify-center w-[1210px] items-center h-24 bg-white'}>
             <div>
                 <p
                     id="jumlahthread"
@@ -35,7 +35,6 @@ function LaporanThread() {
                     {threadDetail}
                 </p>
             </div>
-
         </div>
     )
 }
